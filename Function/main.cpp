@@ -11,7 +11,7 @@ void main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	int c = sum(2, 3);
+	int c = sum(2,3);
 	cout << "Сумма = " << c << endl;
 	cout << "Разность = " << dif(8,3) << endl;
 	cout << "Произведение = " << prod(5,3) << endl;
