@@ -17,18 +17,20 @@ void SayHello();
 void FillRand(int arr[], const int N, int minRand = 0, int maxRand = 10);
 void PrintArr(int arr[], const int N);
 int SummArray(int arr[], const int N);
-int AvgInArray(int arr[], const int N);
+double AvgInArray(int arr[], const int N);
 int minValueInArray(int arr[], const int N);
 int maxValueInArray(int arr[], const int N);
 void SortArray(int arr[], const int N, bool Up = true);
 void SayGoodBye();
+
+int NewSumm(int arr[], const int N);
 
 void main()
 {
 	setlocale(LC_ALL, "Russian");
 	SayHello();
 
-	const int N = 10;
+	const int N = 5;
 	int arr[N]{};
 
 	FillRand(arr, N);
@@ -115,10 +117,11 @@ int SummArray(int arr[], const int N)
 	return Summ;
 }
 
-int AvgInArray(int arr[], const int N)
-{	//Среднеарифметическое значение элементов массива
-	int Avg = SummArray(arr, N) / N;
-	return Avg;
+double AvgInArray(int arr[], const int N)
+{
+	//double Avg = (double)SummArray(arr, N) / N;
+	//return Avg;
+	return (double)SummArray(arr, N) / N;
 }
 
 int minValueInArray(int arr[], const int N)
@@ -181,6 +184,15 @@ void SayGoodBye()
 	cout << endl;
 }
 
+int NewSumm(int arr[], const int N)
+{
+	int summ = arr[0];
+	for (int i = 1; i < N; i++)
+	{
+		summ += arr[i];
+	}
+	return summ;
+}
 //Исполнитель
 /*
 -----------------------------------------------------
